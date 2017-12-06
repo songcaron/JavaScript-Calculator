@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title> Calculator </title>
+</head>
+
+<body>
+	<h1> Calculator</h1>
+	<script type = "text/javascript">
+
+	
+			function add()
+				{
+					
+					var val1 = +document.getElementById("firstvalue").value;
+					var val2 = +document.getElementById("secondvalue").value;
+					var addResult = val1 + val2;
+					document.getElementById("demo").innerHTML = addResult;
+				}
+					
+			function subtract()
+				{
+					var val1 = +document.getElementById('firstvalue').value;
+					var val2 = +document.getElementById('secondvalue').value;
+					var subResult = val1-val2;
+					document.getElementById("demo").innerHTML = subResult;
+				}
+			function multiply()
+				{
+					var val1 = +document.getElementById('firstvalue').value;
+					var val2 = +document.getElementById('secondvalue').value;
+					var mulResult = val1 * val2;
+					document.getElementById("demo").innerHTML = mulResult;
+				}
+			function divide()
+				{
+					var val1 = +document.getElementById('firstvalue').value;
+					var val2 = +document.getElementById('secondvalue').value;
+					
+					if(val2 == 0)
+					{
+						alert("Cannot divide by 0!");
+					}
+					else
+
+					var divResult = val1/val2;
+					document.getElementById("demo").innerHTML = divResult;
+				}
+			
+			
+			
+	</script>
+	
+	<label>Enter Value 1: <input type = "text" id = "firstvalue" /> </label><br/>
+	
+	
+	<label>Enter Value 2: <input type = "text" id = "secondvalue" /> </label><br/>
+	
+	
+	<input type="radio" id="add" name = "radio" onclick = "add()" /> Add (+) <br>
+    <input type="radio" id="subtract" name = "radio" onclick = "subtract()"/> Subtract (-) <br>
+    <input type="radio" id="multiply" name = "radio" onclick = "multiply()"/> Multiply (*) <br>
+    <input type="radio" id="divide" name = "radio" onclick = "divide()" /> Divide (/) <br><br>
+	
+	
+	Result: <label id = "demo"></label>
+	
+	
+</body>
+</html>
